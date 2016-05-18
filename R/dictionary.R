@@ -68,7 +68,7 @@ sc_dict <- function(search_string,
         cat('category: ' %+% d[['dev_category']][1])
         cat('\n' %+% paste(rep('', 70), collapse = '-') %+% '\n')
         cat('DEVELOPER FRIENDLY NAME:\n\n')
-        cat(d[['developer_friendly_name']][1] %+% '\n\n')
+        cat(d[['dev_friendly_name']][1] %+% '\n\n')
         cat('DESCRIPTION:\n\n')
         cat(strwrap(d[['description']][1], 70) %+% '\n')
         cat('\n')
