@@ -1,12 +1,12 @@
-c434a819cbb04ccec25c10f7593fea27 *DESCRIPTION
-7ff5d33b043ce019c03b6aed4214d207 *LICENSE
+26f6b1f3425239cf735b47b92060c235 *DESCRIPTION
+709c3c86abe236d1c0e7b049b83a3742 *LICENSE
 06ada07b22d6002d109a9fcf9bec3bf3 *NAMESPACE
-798c42a75396061c3a0ed0e3b3d28db8 *NEWS.md
-32a0e0c919c92efa686acb8fb77f070d *R/api_convert.R
+471f01f2ee75267328242aac5181b77f *NEWS.md
+dc023e2a2c9dede445dcdcdcdb086b3c *R/api_convert.R
 0d1531c0451c9d2e21d71dd69b963e4d *R/api_key.R
 ccc36633359a0aaf51a8c85050f70c9d *R/dictionary.R
 2d4b609eff78173ad7de04868b3f58ff *R/distance.R
-033ddc3e782a9c36b7f1c51e1bbf2893 *R/filter.R
+499550a7dae33351f1b9ce519832c180 *R/filter.R
 c1a03b23f7d0296d771d11bc893d56e3 *R/get.R
 d1cc5e2054c5ab0aa8928c4584895281 *R/init.R
 545313f9c53863247a1659bff5951a5e *R/rscorecard.R
@@ -17,7 +17,7 @@ b7470dd3d6d49fb47caafcdee9db36c0 *R/select.R
 bcf73e24b8f225ad22f1e4073c1a5bb1 *build/vignette.rds
 87db108cc070a1f260ad5b00a4ac16bd *inst/doc/introduction.R
 d12a4b8b7d8ca55f8b4bc10b7a7f44c7 *inst/doc/introduction.Rmd
-1a14155ef940a1314bd9e7a3005f9082 *inst/doc/introduction.html
+16b055d0b524451178ff3640b8fe13e5 *inst/doc/introduction.html
 6e45bac26295aeb2e4032029fbc3b08d *man/reexports.Rd
 3ed7e9ea28dbc83e01cb070c43148e71 *man/rscorecard.Rd
 b04bcbf2ffae7e2917a061ef1b3cf906 *man/sc_dict.Rd
@@ -30,7 +30,7 @@ fa7ddc3d330676b3fcf8f7ee0c16f4e3 *man/sc_year.Rd
 7fb08c2d9944893d864ac78fa4cd4685 *man/sc_zip.Rd
 90321acb0ccd3708f5392dfba7ec00c4 *tests/testthat.R
 2f4de8cc7c74c51347968d8814fb9123 *tests/testthat/test-distance.R
-be9f20d379c411977744268e1995191e *tests/testthat/test-filter.R
+16bde85d82c397257ec99f949a2094da *tests/testthat/test-filter.R
 ef23c45bd857e8993fd16be4fd43f735 *tests/testthat/test-get.R
 feb29282a6700d74b05c989f30bb2272 *tests/testthat/test-select.R
 146cc8b20eb058497a8f520097ec7ee8 *tests/testthat/test-year.R

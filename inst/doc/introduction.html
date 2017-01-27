@@ -11,7 +11,7 @@
 
 <meta name="author" content="Benjamin Skinner" />
 
-<meta name="date" content="2017-01-14" />
+<meta name="date" content="2017-01-26" />
 
 <title>Downloading Department of Education College Scorecard Data</title>
 
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Downloading Department of Education College Scorecard Data</h1>
 <h4 class="author"><em>Benjamin Skinner</em></h4>
-<h4 class="date"><em>2017-01-14</em></h4>
+<h4 class="date"><em>2017-01-26</em></h4>
 
 </div>
 
@@ -135,13 +135,13 @@ df
 #&gt;   unitid                                                   instnm stabbr
 #&gt; *  &lt;int&gt;                                                    &lt;chr&gt;  &lt;chr&gt;
 #&gt; 1 191515                                         Hamilton College     NY
-#&gt; 2 214759 Pennsylvania State University-Penn State Fayette- Eberly     PA
-#&gt; 3 197230                                            Wells College     NY
+#&gt; 2 197230                                            Wells College     NY
+#&gt; 3 214759 Pennsylvania State University-Penn State Fayette- Eberly     PA
 #&gt; 4 214625  Pennsylvania State University-Penn State New Kensington     PA
 #&gt; 5 191676                                         Houghton College     NY
 #&gt; 6 196051                                Morrisville State College     NY
-#&gt; 7 194392                  Paul Smiths College of Arts and Science     NY
-#&gt; 8 214643    Pennsylvania State University-Penn State Wilkes-Barre     PA
+#&gt; 7 214643    Pennsylvania State University-Penn State Wilkes-Barre     PA
+#&gt; 8 194392                  Paul Smiths College of Arts and Science     NY
 #&gt; # ... with 1 more variables: year &lt;dbl&gt;</code></pre>
 <div id="bookend-commands" class="section level2">
 <h2>Bookend commands</h2>
@@ -246,13 +246,13 @@ df
 #&gt; # A tibble: 10 × 4
 #&gt;    unitid                                               instnm stabbr
 #&gt; *   &lt;int&gt;                                                &lt;chr&gt;  &lt;chr&gt;
-#&gt; 1  220978                    Middle Tennessee State University     TN
-#&gt; 2  248925    Tennessee College of Applied Technology Nashville     TN
+#&gt; 1  248925    Tennessee College of Applied Technology Nashville     TN
+#&gt; 2  220978                    Middle Tennessee State University     TN
 #&gt; 3  219994      Tennessee College of Applied Technology-Dickson     TN
 #&gt; 4  221184                    Nashville State Community College     TN
 #&gt; 5  221102 Tennessee College of Applied Technology-Murfreesboro     TN
-#&gt; 6  219602                         Austin Peay State University     TN
-#&gt; 7  220279   Tennessee College of Applied Technology-Hartsville     TN
+#&gt; 6  220279   Tennessee College of Applied Technology-Hartsville     TN
+#&gt; 7  219602                         Austin Peay State University     TN
 #&gt; 8  222053                    Volunteer State Community College     TN
 #&gt; 9  221838                           Tennessee State University     TN
 #&gt; 10 219888                     Columbia State Community College     TN
@@ -274,19 +274,20 @@ df &lt;- sc_init() %&gt;%
 #&gt; Request complete!
 df
 #&gt; # A tibble: 282 × 4
-#&gt;    unitid                                instnm md_earn_wne_p10  year
-#&gt;     &lt;int&gt;                                 &lt;chr&gt;           &lt;int&gt; &lt;dbl&gt;
-#&gt; 1  130493 Southern Connecticut State University           44300  2009
-#&gt; 2  161138       Eastern Maine Community College           33800  2009
-#&gt; 3  161688          Allegany College of Maryland           32100  2009
-#&gt; 4  161253                   University of Maine           40300  2009
-#&gt; 5  166133             Holyoke Community College           31500  2009
-#&gt; 6  166823           Massasoit Community College           32800  2009
-#&gt; 7  167376      Northern Essex Community College           30400  2009
-#&gt; 8  166513    University of Massachusetts-Lowell           50800  2009
-#&gt; 9  167631             Roxbury Community College           33200  2009
-#&gt; 10 166638    University of Massachusetts-Boston           46000  2009
-#&gt; # ... with 272 more rows</code></pre>
+#&gt;    unitid                                                        instnm
+#&gt;     &lt;int&gt;                                                         &lt;chr&gt;
+#&gt; 1  129756                                   Middlesex Community College
+#&gt; 2  130943                                        University of Delaware
+#&gt; 3  196200                                       SUNY College at Potsdam
+#&gt; 4  212115                   East Stroudsburg University of Pennsylvania
+#&gt; 5  213783                          Mansfield University of Pennsylvania
+#&gt; 6  214591 Pennsylvania State University-Penn State Erie-Behrend College
+#&gt; 7  214731           Pennsylvania State University-Penn State Brandywine
+#&gt; 8  215284                            University of Pittsburgh-Johnstown
+#&gt; 9  215309                           University of Pittsburgh-Titusville
+#&gt; 10 214786    Pennsylvania State University-Penn State Greater Allegheny
+#&gt; # ... with 272 more rows, and 2 more variables: md_earn_wne_p10 &lt;int&gt;,
+#&gt; #   year &lt;dbl&gt;</code></pre>
 </div>
 </div>
 
