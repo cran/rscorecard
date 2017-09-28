@@ -1,10 +1,10 @@
 Package: rscorecard
 Title: A Method to Download Department of Education College Scorecard
         Data
-Version: 0.3.5
-Authors@R: person("Benjamin", "Skinner", email = "b.skinner@vanderbilt.edu",
+Version: 0.4.0
+Authors@R: person("Benjamin", "Skinner", email = "btskinner@virginia.edu",
     role = c("aut", "cre"))
-Maintainer: Benjamin Skinner <b.skinner@vanderbilt.edu>
+Maintainer: Benjamin Skinner <btskinner@virginia.edu>
 URL: http://github.com/btskinner/rscorecard
 BugReports: http://github.com/btskinner/rscorecard/issues
 Description: A method to download Department of Education College
@@ -17,11 +17,11 @@ Depends: R (>= 3.2.3)
 License: MIT + file LICENSE
 LazyData: true
 Imports: dplyr, jsonlite, lazyeval, magrittr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2017-01-26 12:46:56 UTC; benski
+Packaged: 2017-09-28 16:18:25 UTC; bts4h
 Author: Benjamin Skinner [aut, cre]
 Repository: CRAN
-Date/Publication: 2017-01-27 10:18:43
+Date/Publication: 2017-09-28 18:52:35 UTC

@@ -1,3 +1,13 @@
+# rscorecard 0.4.0
+
+* update dictionary for 28 September 2017 release of scorecard data
+* update link in introduction vignette
+* change contact information
+* read data dictionary sheet by name instead of sheet number when
+  making `sysdata.rda` in `./data-raw/make_dict_hash.R`
+* correct `sc_get()` to use `floor()` instead of `ceiling()` so that
+  it doesn't make unnecessary API request/pull (h/t @jjchern)
+
 # rscorecard 0.3.3
 
 ### Bug fix
