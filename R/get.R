@@ -11,6 +11,12 @@
 #'     first set your key using \code{sc_key}, then you may omit this
 #'     parameter. A key set here will take precedence over any set in
 #'     the environment (DATAGOV_API_KEY).
+#' @param debug Set to true to print and return API call (URL string)
+#'     rather than make actual request. Should only be used when
+#'     debugging calls.
+#' @param print_key_debug Only used when \code{debug == TRUE}. Default
+#'     masks the \code{api_key} value. Set to \code{TRUE} to print the
+#'     full API call string with the \code{api_key} unmasked.
 #'
 #' @examples
 #' \dontrun{
@@ -23,7 +29,7 @@
 #' To obtain an API key, visit \url{https://api.data.gov/signup}
 
 #' @export
-sc_get <- function(sccall, api_key) {
+sc_get <- function(sccall, api_key, debug = FALSE, print_key_debug = FALSE) {
 
     ## check first argument
     if (identical(class(try(sccall, silent = TRUE)), 'try-error')) {
@@ -57,9 +63,31 @@ sc_get <- function(sccall, api_key) {
         }
     }
 
-    ## first GET
+    ## init connection call
     con <- url %+% '&_page=0&_per_page=100&api_key=' %+% api_key
-    init <- fromJSON(con)
+
+    ## if debug == TRUE, don't call but return the call
+    if (debug) {
+
+        ## hide API key by default
+        if (!print_key_debug) {
+            con <- gsub('api_key=.+$', 'api_key=<...HIDDEN...>', con)
+        }
+
+        ## print to stdout
+        cat('\n' %+% paste(rep('', 70), collapse = '-') %+% '\n')
+        cat('API call string')
+        cat('\n' %+% paste(rep('', 70), collapse = '-') %+% '\n\n')
+        cat(con %+% '\n')
+        cat('\n' %+% paste(rep('', 70), collapse = '-') %+% '\n')
+
+        ## return
+        return(con)
+    }
+
+    ## make first GET
+    content <- httr::content(httr::GET(con), as = 'text', encoding = 'UTF-8')
+    init <- jsonlite::fromJSON(content)
 
     ## return if no options
     if (init[['metadata']][['total']] == 0) {
@@ -79,7 +107,8 @@ sc_get <- function(sccall, api_key) {
         for (i in 1:pages) {
             message('Request chunk ' %+% i)
             con <- url %+% '&_page=' %+% i %+% '&_per_page=100&api_key=' %+% api_key
-            page_list[[i]] <- fromJSON(con)[['results']]
+            content <- httr::content(httr::GET(con), as = 'text', encoding = 'UTF-8')
+            page_list[[i]] <- jsonlite::fromJSON(content)[['results']]
         }
 
         df <- dplyr::bind_rows(dplyr::tbl_df(init[['results']]), page_list)
