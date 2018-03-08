@@ -1,7 +1,7 @@
-54553136d6f7ebfd430ce6ec699531db *DESCRIPTION
+d5ab85856928d8e0e5f14bcfc659dcbf *DESCRIPTION
 709c3c86abe236d1c0e7b049b83a3742 *LICENSE
 cb9473db30009e592af760f1f38b01a9 *NAMESPACE
-1cfab531586cd9e3863191501f62f171 *NEWS.md
+f3bae37cabc4c2cf7fdb414384c8daaf *NEWS.md
 dc023e2a2c9dede445dcdcdcdb086b3c *R/api_convert.R
 0d1531c0451c9d2e21d71dd69b963e4d *R/api_key.R
 ccc36633359a0aaf51a8c85050f70c9d *R/dictionary.R
@@ -12,12 +12,12 @@ d1cc5e2054c5ab0aa8928c4584895281 *R/init.R
 545313f9c53863247a1659bff5951a5e *R/rscorecard.R
 b7470dd3d6d49fb47caafcdee9db36c0 *R/select.R
 6a8ab44778dd4df5a0e78ef86a0d80f9 *R/select_year.R
-166af24c627cade27cb35c7b5958b542 *R/sysdata.rda
+c667534678af1ca5af5bc1881afc0a5f *R/sysdata.rda
 691c525dc6b6dd94a15116b38a430893 *R/utility_functions.R
-fb6f10f6a184a2c73f34ce6b40c5fb0b *build/vignette.rds
+77764d039b1e40936f86b9376d439ad6 *build/vignette.rds
 87db108cc070a1f260ad5b00a4ac16bd *inst/doc/introduction.R
 d99723fa1176b5701efefc6d8ef5cfb4 *inst/doc/introduction.Rmd
-f9723e5aad1b7395a1630d848e3620a6 *inst/doc/introduction.html
+c3506f7ca733ba4927f1e9aa8c985384 *inst/doc/introduction.html
 4feea7daac0af64b303e8b52b337dc20 *man/reexports.Rd
 6f5f7dd93522d661ed4b852a1f1aa4d2 *man/rscorecard.Rd
 791cf8225e8401a975ce33962e08e878 *man/sc_dict.Rd

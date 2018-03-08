@@ -1,12 +1,14 @@
 Package: rscorecard
 Title: A Method to Download Department of Education College Scorecard
         Data
-Version: 0.6.0
-Authors@R: person("Benjamin", "Skinner", email = "btskinner@virginia.edu",
-    role = c("aut", "cre"))
+Version: 0.7.0
+Authors@R: person("Benjamin", "Skinner",
+	          email = "btskinner@virginia.edu",
+    	          role = c("aut", "cre"),
+		  comment = c(ORCID = "0000-0002-0337-7415"))
 Maintainer: Benjamin Skinner <btskinner@virginia.edu>
-URL: http://github.com/btskinner/rscorecard
-BugReports: http://github.com/btskinner/rscorecard/issues
+URL: https://github.com/btskinner/rscorecard
+BugReports: https://github.com/btskinner/rscorecard/issues
 Description: A method to download Department of Education College
      Scorecard data using the public API
      <https://collegescorecard.ed.gov/data/documentation/>. It is based on
@@ -21,7 +23,7 @@ RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2017-11-27 15:12:09 UTC; bts4h
-Author: Benjamin Skinner [aut, cre]
+Packaged: 2018-03-08 21:31:40 UTC; bts4h
+Author: Benjamin Skinner [aut, cre] (<https://orcid.org/0000-0002-0337-7415>)
 Repository: CRAN
-Date/Publication: 2017-12-12 17:08:35 UTC
+Date/Publication: 2018-03-08 21:50:53 UTC
