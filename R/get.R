@@ -17,6 +17,8 @@
 #' @param print_key_debug Only used when \code{debug == TRUE}. Default
 #'     masks the \code{api_key} value. Set to \code{TRUE} to print the
 #'     full API call string with the \code{api_key} unmasked.
+#' @param return_json Return data in JSON format rather than as a
+#'     tibble.
 #'
 #' @examples
 #' \dontrun{
@@ -29,7 +31,8 @@
 #' To obtain an API key, visit \url{https://api.data.gov/signup}
 
 #' @export
-sc_get <- function(sccall, api_key, debug = FALSE, print_key_debug = FALSE) {
+sc_get <- function(sccall, api_key, debug = FALSE, print_key_debug = FALSE,
+                   return_json = FALSE) {
 
     ## check first argument
     if (identical(class(try(sccall, silent = TRUE)), 'try-error')) {
@@ -121,20 +124,28 @@ sc_get <- function(sccall, api_key, debug = FALSE, print_key_debug = FALSE) {
         }
     }
 
-    ## make first pull
-    content <- httr::content(resp, as = 'text', encoding = 'UTF-8')
-    init <- jsonlite::fromJSON(content)
+    ## ---------------
+    ## initial pull
+    ## ---------------
+
+    ## get content
+    init_content <- httr::content(resp, as = 'text', encoding = 'UTF-8')
+    ## get metadata
+    init_meta <- jsonlite::fromJSON(init_content)[['metadata']]
+    ## get data and rows
+    init_list <- convert_json_to_tibble(init_content)
 
     ## return if no options
-    if (init[['metadata']][['total']] == 0) {
+    if (init_meta[['total']] == 0) {
         stop('No results! Broaden your search or try different variables.',
              call. = FALSE)
     }
 
-    if (init[['metadata']][['total']] > nrow(init[['results']])) {
+    ## if there are more rows than return, then need to pull in chunks
+    if (init_meta[['total']] > init_list[['df_nrow']]) {
 
         ## get number of pages needed
-        pages <- floor(init[['metadata']][['total']] / 100)
+        pages <- floor(init_meta[['total']] / 100)
 
         message('Large request will require: ' %+% pages %+% ' additional pulls.')
 
@@ -144,15 +155,28 @@ sc_get <- function(sccall, api_key, debug = FALSE, print_key_debug = FALSE) {
             message('Request chunk ' %+% i)
             con <- url %+% '&_page=' %+% i %+% '&_per_page=100&api_key=' %+% api_key
             content <- httr::content(httr::GET(con), as = 'text', encoding = 'UTF-8')
-            page_list[[i]] <- jsonlite::fromJSON(content)[['results']]
+            if (return_json) {
+                page_list[[i]] <- content
+            } else {
+                page_list[[i]] <- convert_json_to_tibble(content)[['df']]
+            }
         }
 
-        df <- dplyr::bind_rows(dplyr::tbl_df(init[['results']]), page_list)
+        ## return_json ? return(<json_st>) : bind tbl_dfs into one
+        if (return_json) {
+            return(c(init_content, unlist(page_list, use.names = FALSE)))
+        } else {
+            df <- dplyr::bind_rows(init_list[['df']], page_list)
+        }
 
     } else {
 
-        df <- dplyr::tbl_df(init[['results']])
-
+        ## return_json ? return(<json_st>) : return single tbl_df pull
+        if (return_json) {
+            return(init_content)
+        } else {
+            df <- init_list[['df']]
+        }
     }
 
     ## convert names back to non-developer-friendly names and return
