@@ -1,7 +1,7 @@
 Package: rscorecard
 Title: A Method to Download Department of Education College Scorecard
         Data
-Version: 0.14.0
+Version: 0.15.0
 Authors@R: person("Benjamin", "Skinner",
 	          email = "btskinner@coe.ufl.edu",
     	          role = c("aut", "cre"),
@@ -20,11 +20,11 @@ License: MIT + file LICENSE
 LazyData: true
 Imports: dplyr, httr, jsonlite, lazyeval, magrittr, tidyselect, tidyr,
         purrr
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Encoding: UTF-8
 Suggests: knitr, rmarkdown, testthat
 NeedsCompilation: no
-Packaged: 2019-12-30 17:03:04 UTC; b.skinner
+Packaged: 2020-04-07 21:07:29 UTC; benski
 Author: Benjamin Skinner [aut, cre] (<https://orcid.org/0000-0002-0337-7415>)
 Repository: CRAN
-Date/Publication: 2020-01-08 19:30:02 UTC
+Date/Publication: 2020-04-09 13:20:02 UTC
