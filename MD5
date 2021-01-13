@@ -1,7 +1,7 @@
-7aa269fa00f0ea28bb4374f5c3696247 *DESCRIPTION
+720f26a4f807da209e1a96833332dd3b *DESCRIPTION
 709c3c86abe236d1c0e7b049b83a3742 *LICENSE
 cce6466401926fed82a237b4cbd58873 *NAMESPACE
-6285e67c680f3488d30569624a807673 *NEWS.md
+79d4673a683fb8da42a9ad7e0120187b *NEWS.md
 dc023e2a2c9dede445dcdcdcdb086b3c *R/api_convert.R
 0d1531c0451c9d2e21d71dd69b963e4d *R/api_key.R
 91eac76af3723008c79365dd9981d82e *R/dictionary.R
@@ -12,7 +12,7 @@ b3410a8732bbc71ca01232fa7456fef8 *R/get.R
 545313f9c53863247a1659bff5951a5e *R/rscorecard.R
 e3dcbe207c613cdd1e5fc3f252f4c115 *R/select.R
 94a802316662ede48ae8d02d10835927 *R/select_year.R
-905557a8bf3b13f0929462c4ccd7e36e *R/sysdata.rda
+742fa83a243daeea5e29238786c13542 *R/sysdata.rda
 d85e9c2b9e2e7eb9f2c8e5ca7fa07339 *R/utility_functions.R
 a4d1e572224027a5baaba1d62e32b82b *man/figures/logo.png
 55f21a5466cc00bba277227d1c83c1af *man/reexports.Rd
