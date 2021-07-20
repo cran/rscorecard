@@ -2,8 +2,10 @@ context('sc_select')
 
 ## dummy init list -------------------------------
 
-dil <- list('dfvars' = TRUE,
+dil <- list('sc_init_list' = TRUE,
+            'dfvars' = FALSE,
             'select' = NULL,
+            'select_order' = NULL,
             'filter' = NULL,
             'zip' = NULL,
             'year' = 2013)
@@ -15,12 +17,15 @@ test_that('Errors for non-init()', {
 
 test_that('Errors for blank', {
     expect_error(sc_select(dil),
-                 'Incomplete select! You must select at least one variable.')
+                 'Incomplete sc_select()! You must select at least one variable.',
+                 fixed = TRUE)
 })
 
 
 test_that('Error for bad variable names', {
-    expect_error(sc_select(dil, uniti))
+    expect_error(sc_select(dil, x),
+                 'Variable "x" not found in dictionary. Please check your spelling or search dictionary: ?sc_dict()',
+                 fixed = TRUE)
 })
 
 ## not on CRAN -----------------------------------

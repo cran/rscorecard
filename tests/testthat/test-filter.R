@@ -1,11 +1,13 @@
 context('sc_filter')
 
 ## dummy init list
-dil <- list('dfvars' = FALSE,
+dil <- list('sc_init_list' = TRUE,
+            'dfvars' = FALSE,
             'select' = NULL,
+            'select_order' = NULL,
             'filter' = NULL,
             'zip' = NULL,
-            'year' = 2013)
+            'year' = "latest")
 
 test_that('Errors for non-init()', {
     expect_error(sc_filter(unitid == 99999),
@@ -27,7 +29,9 @@ test_that('Errors for bad symbols', {
 
 
 test_that('Error for bad variable names', {
-    expect_error(sc_filter(dil, uniti == 99999))
+    expect_error(sc_filter(dil, x == 99999),
+                 'Variable "x" not found in dictionary. Please check your spelling or search dictionary: ?sc_dict()',
+                 fixed = TRUE)
 })
 
 ids <- c(99999, 99998, 99997)
@@ -87,4 +91,9 @@ test_that('Filtered pulls not the same', {
         sc_get(debug = TRUE)
 
     expect_equal(df1, df2)
+})
+
+test_that('Allows for filter variable that is not approved', {
+    check_api()
+    expect_error(sc_filter(dil, avgfacsal == 100000))
 })
