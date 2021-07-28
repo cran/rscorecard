@@ -1,7 +1,7 @@
-9611a4b9074735b8cc4c951f7d555122 *DESCRIPTION
+d09e7b5f6113bd2356be95e0ef0cfb2f *DESCRIPTION
 709c3c86abe236d1c0e7b049b83a3742 *LICENSE
 cce6466401926fed82a237b4cbd58873 *NAMESPACE
-50ae1ea7f6c9a8211bcf9d0857433391 *NEWS.md
+84b189956ef62ea321630cc3fdd3c82d *NEWS.md
 dc023e2a2c9dede445dcdcdcdb086b3c *R/api_convert.R
 0d1531c0451c9d2e21d71dd69b963e4d *R/api_key.R
 34221be95c1588a128dac806fe99b9e2 *R/dictionary.R
@@ -12,7 +12,7 @@ a5c2fa927d1e048a8f42c645306ec3d5 *R/filter.R
 545313f9c53863247a1659bff5951a5e *R/rscorecard.R
 b71854da0183132aa85939f07d4bc26b *R/select.R
 8d01a8d8c372a59c9e4cd276bce5cdd4 *R/select_year.R
-ef0e6013aaf5ca11281aee2759c3f3b4 *R/sysdata.rda
+e7235bc6cf6e14c18b55d9904375a6a8 *R/sysdata.rda
 96de77bac9fb3f74a80567652ee3fecb *R/utility_functions.R
 a4d1e572224027a5baaba1d62e32b82b *man/figures/logo.png
 55f21a5466cc00bba277227d1c83c1af *man/reexports.Rd
@@ -28,7 +28,7 @@ f4cb8c81c4b9164de8ce5a97929104ab *man/sc_zip.Rd
 90321acb0ccd3708f5392dfba7ec00c4 *tests/testthat.R
 5e4d2542a7fade0d85259e83c93e7f03 *tests/testthat/helper-xyz.R
 730c0f067265f8f29972337d3daf8b1a *tests/testthat/test-base-pipe.R
-292cf026e0f83a9698a8901170465e4a *tests/testthat/test-dictionary.R
+ef7eac5580b34cd9c16313756f0303d9 *tests/testthat/test-dictionary.R
 86ce224db3059ecb1682cbd3c522c17c *tests/testthat/test-distance.R
 3efdc997af3d9666cf04e8ad1025d358 *tests/testthat/test-filter.R
 6ebbd9a067cc0c1fa4442ea3614ce71f *tests/testthat/test-get.R
