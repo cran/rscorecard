@@ -4,9 +4,10 @@ context('base pipe (|>)')
 
 test_that('Base R pipe works', {
 
-    ## Removing for now since skip_if() doesn't seem to work wit github actions
+    ## Removing for now since skip_if() doesn't seem to work with
+    ## github actions
 
-    ## ## skip if R version is less than 4.1.0
+    ## skip if R version is less than 4.1.0
     ## skip_if(getRversion() < "4.1.0", "R version too low")
 
     ## out <- list("sc_init_list" = TRUE,

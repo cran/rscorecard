@@ -18,3 +18,6 @@
 #' @docType package
 #' @name rscorecard
 NULL
+
+
+
