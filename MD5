@@ -1,7 +1,7 @@
-9d45cb005ba5f0bf8febe98344d82bcd *DESCRIPTION
+32e9868d3ab2abea3d25d8cf7438f5a9 *DESCRIPTION
 709c3c86abe236d1c0e7b049b83a3742 *LICENSE
 cce6466401926fed82a237b4cbd58873 *NAMESPACE
-c6947666bf0519dffa18fc160cd67f6f *NEWS.md
+e758a5518f1d217bae18453afe4bc6db *NEWS.md
 dc023e2a2c9dede445dcdcdcdb086b3c *R/api_convert.R
 0d1531c0451c9d2e21d71dd69b963e4d *R/api_key.R
 34221be95c1588a128dac806fe99b9e2 *R/dictionary.R
@@ -18,11 +18,11 @@ a4d1e572224027a5baaba1d62e32b82b *man/figures/logo.png
 55f21a5466cc00bba277227d1c83c1af *man/reexports.Rd
 70e3f8256a42ca7cd44e1a7ad55afcbe *man/rscorecard.Rd
 5629f2ac70229ce5bb5701c45324bf31 *man/sc_dict.Rd
-c380a786f8fa970578eb9525dbbc3095 *man/sc_filter.Rd
+9944a642767b1990f326020fd3217364 *man/sc_filter.Rd
 bb91deef3eb487eb9a973d464993fddc *man/sc_get.Rd
 8ce642d97ee67bcd21e5bf63175cef06 *man/sc_init.Rd
 8c5eefe90b9fcaba745a2ddad6015b88 *man/sc_key.Rd
-ae3e16685f864ee1b0e1a7194aa77eb6 *man/sc_select.Rd
+1907fe590dcfdb25d4f8e002edf98239 *man/sc_select.Rd
 50884add927dd1a7cca5776f7be9feb7 *man/sc_year.Rd
 f4cb8c81c4b9164de8ce5a97929104ab *man/sc_zip.Rd
 90321acb0ccd3708f5392dfba7ec00c4 *tests/testthat.R
