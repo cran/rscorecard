@@ -3,6 +3,7 @@
 \docType{package}
 \name{rscorecard}
 \alias{rscorecard}
+\alias{rscorecard-package}
 \title{rscorecard: A Method to Download College Scorecard Data.}
 \description{
 The rscorecard package provides a series of piped functions (a la
@@ -14,10 +15,23 @@ queried. This package requires an API key, which can be requested
 at \url{https://api.data.gov/signup/}.
 }
 \details{
-All command pipes must start with \code{sc_init()}, end with
-\code{sc_get()}, and be linked with the magrittr pipe function,
-\code{\%>\%}.  Internal commands, \code{\link{sc_select}},
-\code{\link{sc_filter}}, \code{\link{sc_year}},
-\code{\link{sc_zip}}, can come in any order in the pipe chain. Only
-\code{\link{sc_select}} is required.
+All command pipes must start with \code{sc_init()}, end with \code{sc_get()},
+and be linked with the base pipe, \code{|>}, or magrittr pipe function,
+\code{\%>\%}. Internal commands, \code{\link{sc_select}},
+\code{\link{sc_filter}}, \code{\link{sc_year}}, \code{\link{sc_zip}}, can
+come in any order in the pipe chain. Only \code{\link{sc_select}} is
+required.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/btskinner/rscorecard}
+  \item Report bugs at \url{https://github.com/btskinner/rscorecard/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Benjamin Skinner \email{bskinner@neh.gov} (\href{https://orcid.org/0000-0002-0337-7415}{ORCID})
+
+}
+\keyword{internal}
