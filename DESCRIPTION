@@ -1,12 +1,12 @@
 Package: rscorecard
 Title: A Method to Download Department of Education College Scorecard
         Data
-Version: 0.30.0
+Version: 0.31.0
 Authors@R: person("Benjamin", "Skinner",
-           email = "bskinner@neh.gov",
+           email = "ben@btskinner.io",
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-0337-7415"))
-Maintainer: Benjamin Skinner <bskinner@neh.gov>
+Maintainer: Benjamin Skinner <ben@btskinner.io>
 URL: https://www.btskinner.io/rscorecard/
 BugReports: https://github.com/btskinner/rscorecard/issues
 Description: A method to download Department of Education College
@@ -23,7 +23,7 @@ RoxygenNote: 7.3.2
 Encoding: UTF-8
 Suggests: knitr, rmarkdown, testthat
 NeedsCompilation: no
-Packaged: 2024-10-23 14:26:08 UTC; bskinner
+Packaged: 2025-04-08 15:55:35 UTC; benski
 Author: Benjamin Skinner [aut, cre] (<https://orcid.org/0000-0002-0337-7415>)
 Repository: CRAN
-Date/Publication: 2024-10-23 17:00:02 UTC
+Date/Publication: 2025-04-09 05:50:02 UTC
