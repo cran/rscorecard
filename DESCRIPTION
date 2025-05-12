@@ -1,7 +1,7 @@
 Package: rscorecard
 Title: A Method to Download Department of Education College Scorecard
         Data
-Version: 0.31.0
+Version: 0.32.0
 Authors@R: person("Benjamin", "Skinner",
            email = "ben@btskinner.io",
            role = c("aut", "cre"),
@@ -23,7 +23,8 @@ RoxygenNote: 7.3.2
 Encoding: UTF-8
 Suggests: knitr, rmarkdown, testthat
 NeedsCompilation: no
-Packaged: 2025-04-08 15:55:35 UTC; benski
-Author: Benjamin Skinner [aut, cre] (<https://orcid.org/0000-0002-0337-7415>)
+Packaged: 2025-04-30 14:23:08 UTC; benski
+Author: Benjamin Skinner [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-0337-7415>)
 Repository: CRAN
-Date/Publication: 2025-04-09 05:50:02 UTC
+Date/Publication: 2025-05-12 13:40:05 UTC
